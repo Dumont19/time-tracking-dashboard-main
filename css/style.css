@@ -8,6 +8,7 @@
 
 :root {
     --blue: hsl(246, 80%, 60%);
+    --soft-blue: hsl(195, 74%, 62%);
     --light-red: hsl(15, 100%, 70%);
     --lime-green: hsl(145, 58%, 55%);
     --violet: hsl(264, 64%, 52%);
@@ -99,19 +100,65 @@ body {
     font-weight: 400;
     color: var(--desaturated-blue);
     margin-top: 20px;
+    transition: .4s ease;
 }
 
 .frequency button:hover {
     color: var(--white);
 }
 
-.actions.work {
+.actions {
+    display: flex;
+    justify-content: space-between;
     background-color: var(--dark-blue);
     border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
     position: relative;
-    height: 7rem;
-    bottom: 35px;
+    bottom: 40px;
     z-index: 0;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.actions:hover {
+    background-color: hsl(235, 46%, 32%);
+}
+
+.actions .info-primary h2 {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.actions .info-primary p {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.actions .info-secondary {
+    display: flex;
+    flex-direction: column;
+}
+
+.actions .info-secondary .dots {
+    align-self: flex-end;
+    color: var(--pale-blue);
+    font-size: 2.25rem;
+    position: relative;
+    bottom: 15px;
+    transition: .4s ease;
+} 
+
+.actions .info-secondary .dots:hover {
+    color: var(--white);
+}
+
+.actions .info-secondary p {
+    color: var(--pale-blue);
+    font-size: 1rem;
 }
 
 .icon {
@@ -129,6 +176,26 @@ body {
     width: 4.5rem;
     position: inherit;
     bottom: 10px;
+}
+
+.play {
+    background-color: var(--soft-blue);
+}
+
+.study {
+    background-color: var(--light-red);
+}
+
+.exercise {
+    background-color: var(--lime-green);
+}
+
+.social {
+    background-color: var(--violet);
+}
+
+.self-care {
+    background-color: var(--soft-orange);
 }
 
 
